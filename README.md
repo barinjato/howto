@@ -276,6 +276,7 @@ The idea is roughly to use the MacOS `Shortcut` app with the following actions:
 - `Extract Text from Image`
 - Use `Shortcut Input`
 - `Copy to Clipboard`
+
 Run with:
 - `shortcuts run <name of the shortcut> -i <image file path>`
 - or using a python script:
