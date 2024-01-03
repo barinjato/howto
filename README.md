@@ -153,7 +153,7 @@ source: https://gist.github.com/angelo-v/e0208a18d455e2e6ea3c40ad637aac53
 
 # Extract a kubeconfig from a merged kubeconfig
 ## @tags: kubernetes, k8s, config, kubeconfig
-`KUBECONFIG=$HOME/.kube/config kubectl config view --minify --flatten --context=my- context > $HOME/.kube/my-context-config`
+`KUBECONFIG=$HOME/.kube/config kubectl config view --minify --flatten --context=my-context > $HOME/.kube/my-context-config`
 
 # Check if a tool is installed otherwise install it
 ## @tags: cli, apt, linux
