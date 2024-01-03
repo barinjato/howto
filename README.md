@@ -269,3 +269,25 @@ Check the output of 'ssh -T git@gitlab.com' to see which user is being used
 ## @tags: replace, sed, &, ampersand, env, envvar
 `sed "s|replace_this|${WITH_THIS_ENV_VAR//&/\\&}|g" file`
 
+# MacOS: OCR to extract text from an image file using the built-in shortcut app
+## @tags: macos, ocr, image, text, shortcut
+## @source: https://blog.greg.technology/2024/01/02/how-do-you-ocr-on-a-mac.html
+The idea is roughly to use the MacOS `Shortcut` app with the following actions:
+- `Extract Text from Image`
+- Use `Shortcut Input`
+- `Copy to Clipboard`
+Run with:
+- `shortcuts run <name of the shortcut> -i <image file path>`
+- or using a python script:
+```python
+import subprocess
+
+file_path = '<image file path>'
+ocr_out = subprocess.check_output(
+    f'shortcuts run ocr-text -i "{file_path}"', shell=True
+)
+print(ocr_out)
+```
+
+  
+
