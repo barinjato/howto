@@ -264,3 +264,8 @@ Check the output of 'ssh -T git@gitlab.com' to see which user is being used
 # Build Docker image for multiple platform with buildx
 ## @tags: docker, build, platform, amd, arm, amd
 `docker buildx build --push --platform linux/arm/v7,linux/arm64/v8,linux/amd64 -t image:image_tag .`
+
+# Replacement using sed and environment variable whose value contains the '&'(ampersand) character that needs to be escaped, '&' has a special meaning in sed
+## @tags: replace, sed, &, ampersand, env, envvar
+`sed "s|replace_this|${WITH_THIS_ENV_VAR//&/\\&}|g" file`
+
